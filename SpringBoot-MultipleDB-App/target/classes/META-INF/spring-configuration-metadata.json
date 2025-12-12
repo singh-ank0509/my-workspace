@@ -1,0 +1,18 @@
+{
+  "groups": [
+    {
+      "name": "spring.h2.datasource",
+      "type": "javax.sql.DataSource",
+      "sourceType": "com.ank.demo.config.H2DataSourceConfig",
+      "sourceMethod": "public javax.sql.DataSource dataSource() "
+    },
+    {
+      "name": "spring.mysql.datasource",
+      "type": "javax.sql.DataSource",
+      "sourceType": "com.ank.demo.config.MySqlDataSourceConfig",
+      "sourceMethod": "public javax.sql.DataSource dataSource() "
+    }
+  ],
+  "properties": [],
+  "hints": []
+}
