@@ -1,0 +1,40 @@
+spring:
+  application:
+    name: pnb
+
+  datasource:
+#    url: jdbc:mysql://localhost:3306/uppcl_test
+    url: jdbc:mysql://10.128.51.69:3306/UPPCL?autoReconnect=true&useUnicode=true&characterEncoding=UTF-8&allowMultiQueries=true&useSSL=false
+    username: uppcladmin
+    password: UppcL^1220
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+  jpa:
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL8Dialect
+    hibernate:
+      ddl-auto: none
+#    show-sql: true
+
+bank:
+  api:
+    baseurl: https://sdcuat.mypnb.in/ExternalAPI/api/UPPCL
+    token-url: https://sdcuat.mypnb.in/ExternalAPI/token
+    client-id: uppcltesting
+    username: crmtesting
+    password: pnb@12345
+    service-name: AccountEnquiry
+    source-system: PNB_API
+
+admin:
+  api:
+    base64: transactionToken
+    access-token-api: https://ewallet-test.uppclonline.com:8280/V1Auth/1.0.0/getAccessToken
+    credit-url: https://ewallet-test.uppclonline.com:8280/V1Transaction/1.0.1/credit
+    source-type: BANK
+    api-key: eyJ4NXQiOiJaalJtWVRNd05USmpPV1U1TW1Jek1qZ3pOREkzWTJJeU1tSXlZMkV6TWpkaFpqVmlNamMwWmc9PSIsImtpZCI6ImdhdGV3YXlfY2VydGlmaWNhdGVfYWxpYXMiLCJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsImFwcGxpY2F0aW9uIjp7Im93bmVyIjoiYWRtaW4iLCJ0aWVyIjoiMTBQZXJNaW4iLCJuYW1lIjoiQXV0aENvbnRyb2xsZXIiLCJpZCI6NjEyLCJ1dWlkIjoiYmQ2NDdjZmEtOGUwYy00YzM3LWJjNjgtNzg5YzQxYjljYjIwIn0sInRpZXJJbmZvIjp7IlVubGltaXRlZCI6eyJzdG9wT25RdW90YVJlYWNoIjp0cnVlLCJzcGlrZUFycmVzdExpbWl0IjowLCJzcGlrZUFycmVzdFVuaXQiOm51bGx9fSwia2V5dHlwZSI6IlBST0RVQ1RJT04iLCJzdWJzY3JpYmVkQVBJcyI6W3sic3Vic2NyaWJlclRlbmFudERvbWFpbiI6ImNhcmJvbi5zdXBlciIsIm5hbWUiOiJBdXRoQ29udHJvbGxlciIsImNvbnRleHQiOiJcL1YxQXV0aFwvMS4wLjAiLCJwdWJsaXNoZXIiOiJhZG1pbiIsInZlcnNpb24iOiIxLjAuMCIsInN1YnNjcmlwdGlvblRpZXIiOiJVbmxpbWl0ZWQifV0sImlhdCI6MTcyMjI1ODU3MCwianRpIjoiYzhhMDI3ZWEtNGZkMC00YTU0LTliYTEtZDE0MWQ2M2Q5NzFmIn0=.KzNFfREoGDmgWpSVZy1T_Lq4zUmYJzeLjeTvBvKY6Qm_hlWlCPcW9-AraRH9h9_duUsx_-cpTqKYEZZra4Rbd9C1q8qbk8D4XtKapBQ2Q1YRPFkFM8gadv6b3E68b7kODi4kLeBMq3wswJl_Q4jLWpL03h3iUKxB5YwfqNZIKq40iw-dO5N1tCeYQ8e7jVrFVPzkY3oLuaGLokvGTTBQvc7xcNEbhou8f0lQ5h8_jiqcXKE4_rITwxiOMPQrPyYPgxRxQNUDfD2O9BkYIqrerrQYAjiL5iPFx2x3_MJZeTl-ONhIAJjdG4VbjG5T2GDiVdKCfVbB56f4TNdCfylGCw==
+
+
+scheduler:
+  dailyCollection: '0 0 21 * * ?'
